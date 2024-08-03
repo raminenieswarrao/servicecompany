@@ -1,13 +1,23 @@
 import React from 'react';
 
-const Header = () => {
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+function Header() {
   return (
-    <header>
-      <h1>Service Company</h1>
-      <nav>
-        <a href="/">Home</a> | <a href="/About">About</a>
-      </nav>
-    </header>
+    <>
+      <Navbar bg="primary" data-bs-theme="dark">
+        <Container>
+          <Navbar.Brand href="#home">ServiceCompany</Navbar.Brand>
+          <Nav className="me-auto">
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/About">About</Nav.Link>
+            <Nav.Link href="#pricing">Pricing</Nav.Link>
+          </Nav>
+        </Container>
+      </Navbar>
+
+    </>
   );
 };
 
